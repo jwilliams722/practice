@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+group :development do
+  gem 'debugger'
+  gem 'guard'
+  gem 'guard-rspec'
+
+  if RUBY_PLATFORM.downcase.include?("darwin")
+    gem 'rb-fsevent'
+    gem 'ruby_gntp' # also install growlnotify from the Extras/growlnotify/growlnotify.pkg in Growl disk image
+                    #gem 'growl' # also install growlnotify from the Extras/growlnotify/growlnotify.pkg in Growl disk image
+  end
+end
