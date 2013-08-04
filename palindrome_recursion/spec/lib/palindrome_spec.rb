@@ -59,23 +59,27 @@ describe Palindrome do
 
     describe "it handles numbers" do
       it "should return false for 1" do
-        expect(subject.palindrome?("1")).to be_true
+        expect(subject.palindrome?(1)).to be_true
       end
 
       it "should return true for 11" do
-        expect(subject.palindrome?("11")).to be_true
+        expect(subject.palindrome?(11)).to be_true
       end
 
       it "should return false for 12" do
-        expect(subject.palindrome?("12")).to be_false
+        expect(subject.palindrome?(12)).to be_false
       end
 
       it "should return true for 121" do
-        expect(subject.palindrome?("121")).to be_true
+        expect(subject.palindrome?(121)).to be_true
       end
 
       it "should return false for 123" do
-        expect(subject.palindrome?("123")).to be_false
+        expect(subject.palindrome?(123)).to be_false
+      end
+
+      it "should return true for 32123" do
+        expect(subject.palindrome?(32123)).to be_true
       end
     end
   end
